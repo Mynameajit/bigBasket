@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import SmartBasket from "../components/product/SmartBasket";
-import ImageHeader from "../components/product/imageHeader";
+import ImageHeader from "../components/product/ImageHeader";
 import BestSellers from "../components/product/BestSellers";
 import TopOffers from "../components/product/TopOffers";
 import FruitsVegSection from "../components/product/FruitsVegSection";
