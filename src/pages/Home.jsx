@@ -1,22 +1,39 @@
-import { Stack } from "@mui/material";
-import SmartBasket from "../components/product/SmartBasket";
-import ImageHeader from "../components/product/ImageHeader";
-import BestSellers from "../components/product/BestSellers";
-import TopOffers from "../components/product/TopOffers";
-import FruitsVegSection from "../components/product/FruitsVegSection";
-import ProductSlider from "../components/product/ProductSlider";
-import BeveragesSection from "../components/product/Beverages";
+import { Box, Stack } from "@mui/material";
+import Header from "../components/common/Header";
+import HeroBanner from "./HeroBanner";
+import TrendingSection from "./TrendingSection";
+import ReorderSection from "./ReorderSection";
+import CommonSlider from "../components/CommonSlider";
+import { slider1Data, slider2Data } from "../data/sliderdata";
+import TrendingCategory from "../components/TrendingCategory";
+import electronic from "../assets/electronic.jpeg";
+
 
 const Home = () => {
   return (
-    <Stack width={{ xs: "100%", md: "78%" }} minHeight={"100vh"} marginX={"auto"} px={2}>
-      <ImageHeader />
-      <SmartBasket />
-     <BestSellers/>
-     <TopOffers/>
-     <FruitsVegSection/>
-     <BeveragesSection/>
-     <ProductSlider/>
+    <Stack sx={{pb:20,minHeight:"100vh"}}>
+      <Header />
+
+      <Stack sx={{paddingTop:"15rem"}}>
+        <HeroBanner />
+        <ReorderSection />
+        <TrendingCategory />
+        <CommonSlider data={slider1Data} height={180}/>
+        <TrendingSection/>
+        <CommonSlider data={slider2Data} height={180}/>
+        
+  {/* Image */}
+      <Box
+        component="img"
+        src={electronic}
+        sx={{
+          width: "100%",
+          // height: 90,
+          // objectFit: "contain",
+        }}
+      />
+
+      </Stack>
     </Stack>
   );
 };

@@ -1,20 +1,19 @@
-import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./routes/AppRoutes";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import BottomNav from "./components/common/BottomNav";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
-      {/* 🔥 Common Layout */}
-      <Navbar />
 
-      {/* 🔀 Pages Render */}
-      <AppRoutes />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
 
-      <Footer />
+      <BottomNav />
+
     </BrowserRouter>
   );
-}
+};
 
 export default App;
