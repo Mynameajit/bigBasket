@@ -6,6 +6,7 @@ const HeroBanner = () => {
     <Box sx={{ p: 1, pt: 1 }}>
       <Box
         sx={{
+          display:{xs:"flex",md:"none"},
           width: "100%",
           // height: 160,
           borderRadius: "16px",
@@ -13,13 +14,15 @@ const HeroBanner = () => {
           // boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
         }}
       >
-        <img
+        <Box
+          component="img"
           src={heroImg}
           alt="banner"
-          style={{
+          sx={{
             width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            height: { xs: "100%", md: 400 },
+            objectFit: {xs:"cover",md:"fill"},
+            borderRadius: "10px",
           }}
         />
       </Box>

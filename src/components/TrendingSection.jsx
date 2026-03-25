@@ -49,7 +49,6 @@ const TrendingSection = () => {
           display: "flex",
           gap: 2,
           overflowX: "auto",
-          px: 2,
           pb: 2,
         }}
       >

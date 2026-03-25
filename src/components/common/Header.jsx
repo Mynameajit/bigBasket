@@ -23,7 +23,8 @@ const Header = () => {
         position:"fixed",
         top:0,
         right:0,
-        zIndex:100
+        zIndex:100,
+        px:{xs:1,md:15}
       }}
     >
       {/* Top Row */}

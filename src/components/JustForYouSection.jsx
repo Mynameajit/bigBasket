@@ -4,8 +4,6 @@ import t1 from "../assets/trending/t1.jpeg";
 import t2 from "../assets/trending/t2.jpeg";
 import t3 from "../assets/trending/t3.jpeg";
 
-
-
 export const products = [
   {
     id: 1,
@@ -35,53 +33,39 @@ export const products = [
     image: t3,
   },
 ];
-const ReorderSection = () => {
+const JustForYouSection = () => {
   return (
-    <Box sx={{ mt: 2,px:2 }}>
+    <Box sx={{ mt: 2, px: 2 }}>
       {/* Title */}
-      <Box >
+      <Box>
         <Typography fontWeight="bold" fontSize={18}>
-          REORDER & SAVE
+          Just for you
+        </Typography>
+        <Typography fontSize={12}>
+          Smart saving on everyday essentials
         </Typography>
       </Box>
 
-      {/* Tabs */}
-      <Tabs value={0} >
-        <Tab label="Order again" sx={{textTransform:"none"}}/>
-        <Tab label="Best prices" sx={{textTransform:"none"}}/>
-      </Tabs>
-
       {/* Products */}
-   <Box
-  sx={{
-    display: "flex",
-    gap: 2,
-    overflowX: "auto",
-    px: 2,
-    py: 2,
+      <Box
+        sx={{
+          display: "flex",
+          gap: 2,
+          overflowX: "auto",
+          py: 2,
 
-    scrollbarWidth: "none",
-    "&::-webkit-scrollbar": { display: "none" },
-  }}
->
-  {products.map((item) => (
-    <ProductCard key={item.id} item={item} />
-  ))}
-</Box>
+          scrollbarWidth: "none",
+          "&::-webkit-scrollbar": { display: "none" },
+        }}
+      >
+        {products.map((item) => (
+          <ProductCard key={item.id} item={item} />
+        ))}
+      </Box>
 
-      <Button
-      size="small"
-      sx={{
-        color:"#0f5d52",
-        border:"1px solid gray",
-        borderRadius:"10px",
-        textTransform:"none",
-        textAlign:"center",
-        width:"100%"
-      }}
-      >View more products</Button>
+      
     </Box>
   );
 };
 
-export default ReorderSection;
+export default JustForYouSection;
